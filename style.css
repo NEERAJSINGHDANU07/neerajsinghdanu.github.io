@@ -1,0 +1,157 @@
+/* --- Root Variables for Color Scheme --- */
+:root {
+    --primary-color: #002244;    /* Deep Navy Blue - Main color */
+    --accent-color: #FF7F50;     /* Coral/Tangerine - Highlight color */
+    --text-color: #333333;
+    --background-color: #F8F9FA; /* Light background */
+    --light-bg-color: #FFFFFF;   /* White for card backgrounds */
+}
+
+/* --- Global Styles --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+a { text-decoration: none; }
+
+/* --- Navigation Bar --- */
+.navbar {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* ... (Navigation links and hover styles use variables) ... */
+
+/* --- 2. Hero Section (The Stunning Front Page) --- */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color), #003366);
+    color: white;
+    padding: 100px 5%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 85vh; 
+}
+
+/* Big and Unique Heading Style */
+.hero h1 {
+    font-size: 4em; /* Very Big Heading */
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.hero h1 strong {
+    color: var(--accent-color); /* Highlight your name */
+}
+.hero .tagline {
+    font-size: 1.4em;
+    opacity: 0.95;
+    margin-bottom: 40px;
+}
+
+/* Call-to-Action Buttons */
+.cta-buttons .button {
+    padding: 15px 30px; 
+    border-radius: 50px; /* Pill shape for modern look */
+    /* ... (rest of the button styles) ... */
+}
+.button.primary {
+    background-color: var(--accent-color); 
+    color: white;
+}
+.button.secondary {
+    border: 2px solid white;
+}
+.button:hover {
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile Icon/Image Placeholder */
+.profile-icon {
+    font-size: 180px; 
+    color: var(--accent-color); 
+    border: 5px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: var(--light-bg-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- General Sections Styling --- */
+.section {
+    padding: 80px 5%;
+    text-align: center;
+}
+.section h2 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    position: relative;
+}
+.section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: 10px auto 0;
+}
+
+/* --- Skills Section Styling (Card-Based Layout) --- */
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.skill-item {
+    background-color: var(--light-bg-color);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    max-width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.skill-item i {
+    font-size: 3em;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+.skill-item h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+/* --- Contact Details --- */
+.contact-details i { color: var(--accent-color); margin-right: 15px; }
+.contact-details a { color: var(--primary-color); font-weight: 600; }
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0.9em;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 992px) {
+    .hero { flex-direction: column; text-align: center; }
+    /* ... (rest of media queries for mobile) ... */
+}
